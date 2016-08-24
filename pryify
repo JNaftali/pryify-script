@@ -1,7 +1,9 @@
-sed -i '' '22i\
-require '\''pry'\' config/environment.rb
+sed -i '' '2i\
+require '\''pry'\''
+' config/environment.rb
 rm Gemfile.lock
-sed -i '' '16i\
-gem '\''pry'\' Gemfile
+sed -i '' '2i\
+gem '\''pry'\''
+' Gemfile
 sed -i '' 's/irb/pry/g' Rakefile
 bundle
